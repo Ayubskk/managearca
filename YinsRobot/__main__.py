@@ -96,7 +96,7 @@ buttons = [
         InlineKeyboardButton(text="About Yins Robot", callback_data="yins_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
+        InlineKeyboardButton(text="Get Help", callback_data="yins_manage"),
         InlineKeyboardButton(
             text="Try inline!​​", switch_inline_query_current_chat=""
         ),
@@ -378,7 +378,7 @@ def yins_about_callback(update, context):
                     InlineKeyboardButton(text="Play Commands", callback_data="yins_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bot Commands", callback_data="yins_notes"),
+                    InlineKeyboardButton(text="Bot Commands", callback_data="yins_support"),
                     InlineKeyboardButton(text="Extra Commands", callback_data="yins_credit"),
                  ],
                  [
@@ -402,6 +402,31 @@ def yins_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
+        elif query.data == "yins_manage":
+        query.message.edit_text(
+            text=f"""
+            🤵 Admin Commands :
+💂 Auth users
+Auth users can use admin commands without admin rights in your group.
+➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
+➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
+➻ /authusers » Check the AUTH LIST in your group.
+            """,
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Manage", callback_data="help_back"),
+                    InlineKeyboardButton(text="Music", callback_data="yins_"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
+                 ]
+                ]
+            ),
+        )    
+        
     elif query.data == "yins_admin":
         query.message.edit_text(
             text=f"""
