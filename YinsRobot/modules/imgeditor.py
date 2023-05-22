@@ -450,4 +450,4 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             await removebg_sticker(client, query.message)
 
 
-__mod_name__ = "Img Editor​"
+__mod_name__ = "ɪᴍɢ-ᴇᴅɪᴛᴏʀ​"
