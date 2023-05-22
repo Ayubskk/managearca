@@ -440,4 +440,4 @@ __help__ = """
 ❂ /chatbot EN : Enables English only chatbot.
 """
 
-__mod_name__ = "Chatbot"
+__mod_name__ = "ᴄʜᴀᴛ-ʙᴏᴛ"
