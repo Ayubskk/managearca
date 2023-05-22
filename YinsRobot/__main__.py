@@ -82,40 +82,43 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an Yins management bot [✨](https://telegra.ph/file/64f4b1e3ab6d6911447d2.jpg)
+*ʜᴇʏ* {}, 🥀
+*✜ ᴛʜɪs ɪs {} !*
+✜ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ & ᴍᴜꜱɪᴄ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
+
 ────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
+× ᴜᴩᴛɪᴍᴇ » `{}`
+× ᴜsᴇʀs » `{}`
+× ᴄʜᴀᴛs » `{}`
 ────────────────────────
-✪ Hit /help to see my available commands.
+*✜ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Yins Robot", callback_data="yins_"),
+        InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"t.me/Archanistz"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="source_"),
+        InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="source_"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
+            text="ᴅᴏɴᴀᴛᴇ", url=f"https://telegra.ph/Thank-you-for-donating-your-money-to-me-05-20"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Yins To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+            text="➗ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"t.me/{bu}?startgroup=new"),
     ],
 ]
 
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪғɪᴄꜱ ᴄᴏᴍᴍᴀɴᴅ."""
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @AyiinXd \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """ʜᴇʏᴀ, ɢʟᴀᴅ ᴛᴏ ʜᴇᴀʀ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴏɴᴀᴛᴇ!
+ ʏᴏᴜ ᴄᴀɴ ꜱᴜᴘᴘᴏʀᴛ ᴛʜᴇ ᴘʀᴏᴊᴇᴄᴛ ʙʏ ᴄᴏɴᴛᴀᴄᴛɪɴɢ @Archanistz \
+ ꜱᴜᴘᴘᴏʀᴛɪɴɢ ɪꜱɴᴛ ᴀʟᴡᴀʏꜱ ғɪɴᴀɴᴄɪᴀʟ! \
+ ᴛʜᴏꜱᴇ ᴡʜᴏ ᴄᴀɴ ɴᴏᴛ ᴘʀᴏᴠɪᴅᴇ ᴍᴏɴᴇᴛᴀʀʏ ꜱᴜᴘᴘᴏʀᴛ ᴀʀᴇ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ʜᴇʟᴘ ᴜꜱ ᴅᴇᴠᴇʟᴏᴘ ᴛʜᴇ ʙᴏᴛ ᴀᴛ ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -198,7 +201,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                     ),
                 )
 
@@ -229,7 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, Saya {dispatcher.bot.first_name}. Senang bertemu dengan Anda.",
+            f"👋 ʜɪ, ꜱᴀʏᴀ {dispatcher.bot.first_name}. ꜱᴇɴᴀɴɢ ʙᴇʀᴛᴇᴍᴜ ᴅᴇɴɢᴀɴ ᴀɴᴅᴀ.",
             parse_mode=ParseMode.HTML
        )
 
@@ -315,7 +318,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                 ),
             )
 
@@ -360,29 +363,25 @@ def yins_about_callback(update, context):
     query = update.callback_query
     if query.data == "yins_":
         query.message.edit_text(
-            text="๏ I'm *Yins*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Yin's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for YinsRobot.",
+            text="""
+            🎵 ʜᴇʟᴘ ᴍᴜꜱɪᴄ ᴄᴏᴍᴍᴀɴᴅꜱ.
+            
+✜ {BOT_NAME} ʜᴀꜱ ᴀ ғᴇᴀᴛᴜʀᴇ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏꜱ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ, ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ.            
+            """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admin Commands", callback_data="yins_admin"),
-                    InlineKeyboardButton(text="Play Commands", callback_data="yins_notes"),
+                    InlineKeyboardButton(text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_admin"),
+                    InlineKeyboardButton(text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Bot Commands", callback_data="yins_support"),
-                    InlineKeyboardButton(text="Extra Commands", callback_data="yins_credit"),
+                    InlineKeyboardButton(text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_support"),
+                    InlineKeyboardButton(text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
+                    InlineKeyboardButton(text="◁", callback_data="yins_back"),
                  ]
                 ]
             ),
@@ -407,7 +406,7 @@ def yins_about_callback(update, context):
             text=f"""
             🤵 Admin Commands :
 
-c stands for channel playback.
+*c* stands for channel playback.
 ➻ /pause or /cpause » Pause the music playing.
 ➻ /resume or /cresume » Resume paused music.
 ➻ /mmute or /cmute » Mute playing music.
@@ -436,7 +435,7 @@ Auth users can use admin commands without admin rights in your group.
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="yins_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="yins_")]]
             ),
         )
 
@@ -466,7 +465,7 @@ Auth users can use admin commands without admin rights in your group.
             """,
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="yins_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="yins_")]]
             ),
         )
     elif query.data == "yins_support":
@@ -484,7 +483,7 @@ Auth users can use admin commands without admin rights in your group.
             """,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="yins_"),]]
+                [[InlineKeyboardButton(text="◁", callback_data="yins_"),]]
             ),
         )
 
@@ -526,7 +525,7 @@ Auth users can use admin commands without admin rights in your group.
             """,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="yins_"),]]
+                [[InlineKeyboardButton(text="◁", callback_data="yins_"),]]
             ),
         )
 
@@ -541,11 +540,11 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Manage", callback_data="help_back"),
-                    InlineKeyboardButton(text="Music", callback_data="yins_"),
+                    InlineKeyboardButton(text="🗂 ᴍᴀɴᴀɢᴇ", callback_data="help_back"),
+                    InlineKeyboardButton(text="🎧 ᴍᴜꜱɪᴄ", callback_data="yins_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
+                    InlineKeyboardButton(text="◁", callback_data="yins_back"),
                  ]
                 ]
             ),
@@ -573,12 +572,12 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_text(
-                f"Contact me in PM to get help of {module.capitalize()}",
+                f"ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴏꜰ {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="ʜᴇʟᴘ",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -589,12 +588,12 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ʟɪꜱᴛ ᴏꜰ ᴘᴏꜱꜱɪʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="ʜᴇʟᴘ",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -755,14 +754,14 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ᴛʜɪꜱ ᴄʜᴀᴛ'ꜱ ꜱᴇᴛᴛɪɴɢꜱ, ᴀꜱ ᴡᴇʟʟ ᴀꜱ ʏᴏᴜʀꜱ."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="ꜱᴇᴛᴛɪɴɢꜱ",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -772,7 +771,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴇᴛᴛɪɴɢꜱ."
 
     else:
         send_settings(chat.id, user.id, True)
@@ -787,10 +786,10 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1606221784:
+        if OWNER_ID != 2098578240:
             update.effective_message.reply_text(
-                "I'm free for everyone ❤️ If you wanna make me smile, just join"
-                "[My Channel]({})".format(DONATION_LINK),
+                "ɪ'ᴍ ғʀᴇᴇ ғᴏʀ ᴇᴠᴇʀʏᴏɴᴇ ❤️ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ᴍᴀᴋᴇ ᴍᴇ ꜱᴍɪʟᴇ, ᴊᴜꜱᴛ "
+                "[ᴅᴏɴᴀᴛᴇ ʜᴇʀᴇ]({})".format(DONATION_LINK),
                 parse_mode=ParseMode.MARKDOWN,
             )
     else:
@@ -803,11 +802,11 @@ def donate(update: Update, context: CallbackContext):
             )
 
             update.effective_message.reply_text(
-                "I've PM'ed you about donating to my creator!"
+                "ɪ'ᴠᴇ ᴘᴍ'ᴇᴅ ʏᴏᴜ ᴀʙᴏᴜᴛ ᴅᴏɴᴀᴛɪɴɢ ᴛᴏ ᴍʏ ᴄʀᴇᴀᴛᴏʀ!"
             )
         except Unauthorized:
             update.effective_message.reply_text(
-                "Contact me in PM first to get donation information."
+                "ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ғɪʀꜱᴛ ᴛᴏ ɢᴇᴛ ᴅᴏɴᴀᴛɪᴏɴ ɪɴғᴏʀᴍᴀᴛɪᴏɴ."
             )
 
 
@@ -822,11 +821,11 @@ def migrate_chats(update: Update, context: CallbackContext):
     else:
         return
 
-    LOGGER.info("Migrating from %s, to %s", str(old_chat), str(new_chat))
+    LOGGER.info("ᴍɪɢʀᴀᴛɪɴɢ ғʀᴏᴍ %s, to %s", str(old_chat), str(new_chat))
     for mod in MIGRATEABLE:
         mod.__migrate__(old_chat, new_chat)
 
-    LOGGER.info("Successfully migrated!")
+    LOGGER.info("ꜱᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ᴍɪɢʀᴀᴛᴇᴅ!")
     raise DispatcherHandlerStop
 
 
@@ -836,12 +835,12 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "✨ Hai, YinzRobot Berhasil Diaktifkan",
+                "✨ ʜᴀɪ, ɢᴜᴀ ᴜᴅᴀʜ ɪᴅᴜᴘ ʟᴀɢɪ ɴɪʜ ᴛᴏᴅ ~",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to support_chat, go and check!"
+                "ʙᴏᴛ ɪꜱɴᴛ ᴀʙʟᴇ ᴛᴏ ꜱᴇɴᴅ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ꜱᴜᴘᴘᴏʀᴛ_ᴄʜᴀᴛ, ɢᴏ ᴀɴᴅ ᴄʜᴇᴄᴋ!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
