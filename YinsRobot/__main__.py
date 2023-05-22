@@ -374,15 +374,12 @@ def yins_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="yins_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="yins_notes"),
+                    InlineKeyboardButton(text="Admin Commands", callback_data="yins_admin"),
+                    InlineKeyboardButton(text="Play Commands", callback_data="yins_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="yins_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="yins_credit"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/AyiinXd/YinsRobot"),
+                    InlineKeyboardButton(text="Bot Commands", callback_data="yins_notes"),
+                    InlineKeyboardButton(text="Extra Commands", callback_data="yins_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
@@ -407,14 +404,35 @@ def yins_about_callback(update, context):
 
     elif query.data == "yins_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, YinsRobot now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            text=f"""
+            🤵 Admin Commands :
+
+c stands for channel playback.
+➻ /pause or /cpause » Pause the music playing.
+➻ /resume or /cresume » Resume paused music.
+➻ /mmute or /cmute » Mute playing music.
+➻ /munmute or /cunmute » Turn on muted music.
+➻ /skip or /cskip » Skip music currently playing.
+➻ /end or /cend » Stop playing music.
+➻ /shuffle or /cshuffle » Randomly shuffle playlist.
+➻ /seek or /cseek » Continue to search for music according to your duration.
+➻ /queue or /cqueue » Check queue list.
+➻ /seekback or /cseekback » Back off look for music according to your duration.
+
+⏩ Skip music playback.
+➻ /skip or /cskip » To skip the queue song.
+➻ Skips music to the specified queue number. Example: /skip 3 will skip music to third queue music and will ignore music 1 and 2 in queue.
+
+🔁 Loop.
+➻ /loop or /cloop [ enable/disable ] or [ intermediate number 1-10 ]
+➻ When activated, the bot plays the currently playing music 1-10 times on voice chat...
+
+💂 Auth users
+Auth users can use admin commands without admin rights in your group.
+➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
+➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
+➻ /authusers » Check the AUTH LIST in your group.
+            """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -424,10 +442,28 @@ def yins_about_callback(update, context):
 
     elif query.data == "yins_notes":
         query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"""
+            🎵 Play Commands : 
+
+➻ Available Commands » play , vplay , cplay.
+
+➻ Commands ForcePlay » playforce , vplayforce , cplayforce.
+
+➻ c stands for playback on channel.
+➻ v stands for video playback.
+➻ force stands for forced play.
+
+➻ /play or /vplay or /cplay » The bot will start playing the query you provided in the voice chat or stream link.
+
+➻ /playforce or /vplayforce or /cplayforce » Force Play stops the currently playing track in voice chat and starts playing the searched track instantly without interrupting/emptying the queue.
+
+➻ /channelplay [ username/ID channel ] or [ disable ] » Connect the channel to a group and stream music on the channel's voice chat from your group.
+
+💽 Playlist.
+➻ /playlist » Check your saved playlists.
+➻ /delplaylist » Delete all music stored in your playlist.
+➻ /play » Start playing your saved playlist.
+            """,
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="yins_")]]
@@ -435,55 +471,62 @@ def yins_about_callback(update, context):
         )
     elif query.data == "yins_support":
         query.message.edit_text(
-            text="*๏ Yins support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Yins.",
+            text=f"""
+            🤖 Bot Commands :
+
+➻ /system » Get top 10 global stats tracks, Top 10 bot users, Top 10 chats in bot, Top 10 played in chat etc.
+
+➻ /msudolist » Check user sudo GSID Music.
+
+➻ /song [ Song title ] » Download any track from youtube in mp3 or mp4 format.
+
+➻ /player » Get an interactive play panel.
+            """,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Support", url="t.me/AyiinXdSupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/AyiinSupport"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_"),
-                 
-                 ]
-                ]
+                [[InlineKeyboardButton(text="Go Back", callback_data="yins_"),]]
             ),
         )
 
 
     elif query.data == "yins_credit":
         query.message.edit_text(
-            text=f"๏ Credis for Yins\n"
-            "\nHere Developers Making And Give Inspiration For Made The YinsRobot",
+            text=f"""
+            🔮 Extra Commands :
+
+➻ /start » Start GSID Music.
+➻ /help » Get commands helper menu with detailed explanations of commands.
+➻ /ping » Ping the Bot and check Ram, Cpu etc stats of bot.
+
+✅ Groups Settings
+➻ /msettings » Get a complete group's settings with inline buttons.
+
+✅ Options in settings
+
+1️⃣ You can set your audio quality in voice chat.
+
+2️⃣ You can set the quality of your video in voice chat.
+
+3️⃣ Auth Users » You can change the admin command mode from here to everyone or just admin. If everyone, anyone in your group can use admin commands (Example: /skip, /stop etc).
+
+4️⃣ Clean Mode » When enabled, delete bot messages after 5 minutes from your group to ensure your chats stay clean and good.
+
+5️⃣ Command Clean » When activated, the Bot will delete executed commands (/play, /pause, /shuffle, /stop etc) direct.
+
+6️⃣ Play Settings.
+➻ /playmode » Get a playback settings panel complete with buttons where you can set your group's playback settings.
+
+🔗 Options in playmode.
+
+1️⃣ Direct or Inline Search Mode » Changes your search mode when you provide a mode /play
+
+2️⃣ Commands Admin Everyone or Admin » If everyone, anyone in your group will be able to use admin commands (Example: /skip, /stop etc).
+
+3️⃣ Type Play Everyone or Admins » If admin, only admins in the group can play music in voice chat.
+            """,
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="AyiinXd", url="https://github.com/AyiinXd"),
-                    InlineKeyboardButton(text="Ayiin-Userbot", url="https://github.com/AyiinXd/Ayiin-Userbot"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="AyiinMusic", url="https://github.com/AyiinXd/AyiinMusic"),
-                    InlineKeyboardButton(text="YinsRobot", url="https://github.com/AyiinXd/YinsRobot"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
-                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
-                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
-                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_"),
-                 ]
-                ]
+                [[InlineKeyboardButton(text="Go Back", callback_data="yins_"),]]
             ),
         )
 
