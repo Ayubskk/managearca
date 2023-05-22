@@ -96,7 +96,7 @@ buttons = [
         InlineKeyboardButton(text="About Yins Robot", callback_data="yins_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="yins_manage"),
+        InlineKeyboardButton(text="Get Help", callback_data="source_"),
         InlineKeyboardButton(
             text="Try inline!​​", switch_inline_query_current_chat=""
         ),
@@ -401,31 +401,6 @@ def yins_about_callback(update, context):
                 timeout=60,
                 disable_web_page_preview=False,
         )
-
-        elif query.data == "yins_manage":
-        query.message.edit_text(
-            text=f"""
-            🤵 Admin Commands :
-💂 Auth users
-Auth users can use admin commands without admin rights in your group.
-➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
-➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
-➻ /authusers » Check the AUTH LIST in your group.
-            """,
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                 [
-                    InlineKeyboardButton(text="Manage", callback_data="help_back"),
-                    InlineKeyboardButton(text="Music", callback_data="yins_"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
-                 ]
-                ]
-            ),
-        )    
         
     elif query.data == "yins_admin":
         query.message.edit_text(
@@ -559,27 +534,22 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            text="""๏›› This advance command for Musicplayer.
+            """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="yins_")
+                    InlineKeyboardButton(text="Manage", callback_data="help_back"),
+                    InlineKeyboardButton(text="Music", callback_data="yins_"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="yins_back"),
                  ]
                 ]
             ),
-        )
+        ) 
     elif query.data == "source_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
