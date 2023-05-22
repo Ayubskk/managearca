@@ -315,4 +315,4 @@ async def del_profanity(event):
                     await asyncio.sleep(10)
                     await dev.delete()
 
-__mod_name__ = "Shield"
+__mod_name__ = "ꜱʜɪᴇʟᴅ"
