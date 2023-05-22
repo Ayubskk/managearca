@@ -381,7 +381,7 @@ def yins_about_callback(update, context):
                     InlineKeyboardButton(text="🗃 ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="◁", callback_data="source_back"),
+                    InlineKeyboardButton(text="◁", callback_data="source_"),
                  ]
                 ]
             ),
