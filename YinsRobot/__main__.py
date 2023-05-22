@@ -96,6 +96,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(text="ᴏᴡɴᴇʀ", url=f"t.me/Archanistz"),
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/+_BCbzO9Vt35iZGQ1"),
     ],
     [
         InlineKeyboardButton(text="ʜᴇʟᴘ", callback_data="source_"),
@@ -372,15 +373,15 @@ def yins_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_admin"),
-                    InlineKeyboardButton(text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_notes"),
+                    InlineKeyboardButton(text="👨‍ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_admin"),
+                    InlineKeyboardButton(text="▶️ ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_support"),
-                    InlineKeyboardButton(text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_credit"),
+                    InlineKeyboardButton(text="🤖 ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_support"),
+                    InlineKeyboardButton(text="🗃 ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="yins_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="◁", callback_data="yins_back"),
+                    InlineKeyboardButton(text="◁", callback_data="source_back"),
                  ]
                 ]
             ),
@@ -532,7 +533,10 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="""๏›› This advance command for Musicplayer.
+            text=f"""
+            📚 ɢꜱɪᴅ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅꜱ : 
+            
+✜ ᴘʟᴇᴀꜱᴇ ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ʙᴇʟᴏᴡ.            
             """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
