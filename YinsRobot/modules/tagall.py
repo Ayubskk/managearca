@@ -60,7 +60,7 @@ async def mentionall(event):
         if not chat_id in spam_chats:
             break
         usrnum += 1
-        usrtxt += f"👤 [{usr.first_name}](tg://user?id={usr.id})\n"
+        usrtxt += f"🐼 [{usr.first_name}](tg://user?id={usr.id})\n"
         if usrnum == 5:
             if mode == "text_on_cmd":
                 txt = f"{msg}\n\n{usrtxt}"
@@ -113,7 +113,7 @@ __mod_name__ = "ᴛᴀɢ-ᴀʟʟ"
 __help__ = """
 ──「 Mention all func 」──
 
-Yins Can Be a Mention Bot for your group.
+GSID Can Be a Mention Bot for your group.
 
 Only admins can tag all.  here is a list of commands
 
