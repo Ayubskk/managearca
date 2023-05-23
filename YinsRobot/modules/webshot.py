@@ -23,7 +23,7 @@ from pyrogram.types import Message
 from YinsRobot import pbot as app
 from YinsRobot.utils.errors import capture_err
 
-__mod_name__ = "Webshot​"
+__mod_name__ = "ᴡᴇʙꜱʜᴏᴏᴛ"
 
 
 @app.on_message(filters.command("webss"))
