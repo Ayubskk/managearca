@@ -37,12 +37,12 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "26543803"
+         "value": "22461642"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "04d3eb58de09326debb350af792bf081"
+         "value": "2c80235363f0286500a8e10900b3cec3"
       },    
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
@@ -80,7 +80,7 @@
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "zenzsupport"
+         "value": "gsidsupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -90,12 +90,12 @@
      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-100123456'",
          "required": true,
-         "value": "-1001918484714"
+         "value": "-1001645530612"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001918484714"
+         "value": "-1001944589524"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -116,7 +116,7 @@
       "ERROR_LOG": {
          "description": "ID of log for show error.",
          "required": false,
-         "value": "-1001918484714"
+         "value": "-1001947575411"
       },
         "ARQ_API": {
             "description": "Get this from @ARQRobot.",
