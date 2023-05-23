@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Yins Robot](https://t.me/YinzRobot)",
+            caption="ʟᴏɢᴏ ʙʏ [ɢꜱɪᴅ ✗ ᴍᴜꜱɪᴄ](https://t.me/goldensid_bot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Yins Robot](https://t.me/YinzRobot)",
+            caption="ʟᴏɢᴏ ʙʏ [ɢꜱɪᴅ ✗ ᴍᴜꜱɪᴄ](https://t.me/goldensid_bot)",
             force_document=False,
         )
         os.remove(flnme)
