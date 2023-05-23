@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*ʜᴇʏ* {}, 🥀
+*ʜᴇʏ {},* 🥀
 
 ✜ ɪ'ᴀᴍ ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ & ᴍᴜꜱɪᴄ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.
 ────────────────────────
@@ -112,7 +112,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-📚 ᴍᴀɴᴀɢᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ʜᴇʟᴘ.
+📚 *ʜᴇʟᴘ ᴍᴀɴᴀɢᴇ ᴄᴏᴍᴍᴀɴᴅꜱ :*
 
 ✜ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪғɪᴄꜱ ᴄᴏᴍᴍᴀɴᴅ."""
 
@@ -366,7 +366,7 @@ def yins_about_callback(update, context):
     if query.data == "yins_":
         query.message.edit_text(
             text="""
-            🎵 ʜᴇʟᴘ ᴍᴜꜱɪᴄ ᴄᴏᴍᴍᴀɴᴅꜱ.
+            🎵 *ʜᴇʟᴘ ᴍᴜꜱɪᴄ ᴄᴏᴍᴍᴀɴᴅꜱ :*
             
 ✜ ɢꜱɪᴅ ʜᴀꜱ ᴀ ғᴇᴀᴛᴜʀᴇ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ᴀɴᴅ ᴠɪᴅᴇᴏꜱ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ, ʏᴏᴜ ᴄᴀɴ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ.            
             """,
@@ -406,7 +406,7 @@ def yins_about_callback(update, context):
     elif query.data == "yins_admin":
         query.message.edit_text(
             text=f"""
-            🤵 Admin Commands :
+            🤵 *Admin Commands :*
 
 *c* stands for channel playback.
 ➻ /pause or /cpause » Pause the music playing.
@@ -444,15 +444,15 @@ Auth users can use admin commands without admin rights in your group.
     elif query.data == "yins_notes":
         query.message.edit_text(
             text=f"""
-            🎵 Play Commands : 
+            🎵 *Play Commands :* 
 
 ➻ Available Commands » play , vplay , cplay.
 
 ➻ Commands ForcePlay » playforce , vplayforce , cplayforce.
 
-➻ c stands for playback on channel.
-➻ v stands for video playback.
-➻ force stands for forced play.
+➻ *c* stands for playback on channel.
+➻ *v* stands for video playback.
+➻ *force* stands for forced play.
 
 ➻ /play or /vplay or /cplay » The bot will start playing the query you provided in the voice chat or stream link.
 
@@ -473,7 +473,7 @@ Auth users can use admin commands without admin rights in your group.
     elif query.data == "yins_support":
         query.message.edit_text(
             text=f"""
-            🤖 Bot Commands :
+            🤖 *Bot Commands :*
 
 ➻ /system » Get top 10 global stats tracks, Top 10 bot users, Top 10 chats in bot, Top 10 played in chat etc.
 
@@ -493,7 +493,7 @@ Auth users can use admin commands without admin rights in your group.
     elif query.data == "yins_credit":
         query.message.edit_text(
             text=f"""
-            🔮 Extra Commands :
+            🔮 *Extra Commands :*
 
 ➻ /start » Start GSID Music.
 ➻ /help » Get commands helper menu with detailed explanations of commands.
@@ -536,7 +536,7 @@ def Source_about_callback(update, context):
     if query.data == "source_":
         query.message.edit_text(
             text=f"""
-            📚 ɢꜱɪᴅ ʜᴇʟᴘ ᴄᴏᴍᴍᴀɴᴅꜱ : 
+            📚 *ʜᴇʟᴘ ɢꜱɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ :*
             
 ✜ ᴘʟᴇᴀꜱᴇ ꜱᴇʟᴇᴄᴛ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇɴᴜ ʙᴇʟᴏᴡ.            
             """,
@@ -840,7 +840,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "✨ ʜᴀɪ, ɢᴜᴀ ᴜᴅᴀʜ ɪᴅᴜᴘ ʟᴀɢɪ ɴɪʜ ᴛᴏᴅ ~",
+                "✨ ᴡᴏʏ, ɢᴜᴀ ɪᴅᴜᴘ ʟᴀɢɪ ɴɪʜ ᴛᴏᴅ ~",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
