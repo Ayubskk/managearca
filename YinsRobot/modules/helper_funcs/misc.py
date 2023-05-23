@@ -79,7 +79,7 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
                 EqInlineKeyboardButton(
                     "◁", callback_data="{}_prev({})".format(prefix, modulo_page)
                 ),
-                EqInlineKeyboardButton("• ʜᴏᴍᴇ •", callback_data="fallen_back"),
+                EqInlineKeyboardButton("• ʜᴏᴍᴇ •", callback_data="source_"),
                 EqInlineKeyboardButton(
                     "▷", callback_data="{}_next({})".format(prefix, modulo_page)
                 ),
@@ -87,32 +87,10 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
         ]
 
     else:
-        pairs += [[EqInlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data="fallen_back")]]
+        pairs += [[EqInlineKeyboardButton("• ʙᴀᴄᴋ •", callback_data="source_")]]
 
     return pairs
-
-
-def article(
-    title: str = "",
-    description: str = "",
-    message_text: str = "",
-    thumb_url: str = None,
-    reply_markup: InlineKeyboardMarkup = None,
-    disable_web_page_preview: bool = False,
-) -> InlineQueryResultArticle:
-    return InlineQueryResultArticle(
-        id=uuid4(),
-        title=title,
-        description=description,
-        thumb_url=thumb_url,
-        input_message_content=InputTextMessageContent(
-            message_text=message_text,
-            disable_web_page_preview=disable_web_page_preview,
-        ),
-        reply_markup=reply_markup,
-    )
-
-
+#--
 def send_to_list(
     bot: Bot, send_to: list, message: str, markdown=False, html=False
 ) -> None:
