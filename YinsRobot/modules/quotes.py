@@ -94,4 +94,4 @@ async def quotly_func(client, message: Message):
         print(e)
 
 
-__mod_name__ = "Quotly"
+__mod_name__ = "qᴜᴏᴛᴇꜱ"
