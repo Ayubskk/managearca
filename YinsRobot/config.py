@@ -14,23 +14,23 @@ class Config(object):
     # REQUIRED
     # Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 123456  # integer value, dont use ""
-    API_HASH = "awoo"
-    TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 1606221784  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "AyiinXd"
-    SUPPORT_CHAT = "AyiinXdSupport"  # Your own group for support, do not add the @
+    API_ID = 22461642  # integer value, dont use ""
+    API_HASH = "2c80235363f0286500a8e10900b3cec3"
+    TOKEN = "6096368776:AAH8QlhHYYXxmL7oIGiVBoGBIKsFp2H6-OA"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    OWNER_ID = 1376065420  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "@Clarakariina"
+    SUPPORT_CHAT = "gsidsupport"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001432609692
+        -1001944589524
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001150905176
+        -1001645530612
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
     LOAD = []
-    NO_LOAD = ["rss", "cleaner", "connection", "math"]
+    NO_LOAD = ["rss", "cleaner", "connection", "math", "music"]
     WEBHOOK = False
     INFOPIC = True
     URL = None
@@ -41,12 +41,12 @@ class Config(object):
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
     DRAGONS = get_user_list("elevated_users.json", "sudos")
     ##List of id's - (not usernames) for developers who will have the same perms as the owner
-    DEV_USERS = get_user_list("elevated_users.json", "devs")
+    DEV_USERS = get_user_list("elevated_users.json", "1376065420")
     ##List of id's (not usernames) for users which are allowed to gban, but can also be banned.
     DEMONS = get_user_list("elevated_users.json", "supports")
     # List of id's (not usernames) for users which WONT be banned/kicked by the bot.
     TIGERS = get_user_list("elevated_users.json", "tigers")
-    WOLVES = get_user_list("elevated_users.json", "whitelists")
+    WOLVES = get_user_list("elevated_users.json", "1376065420")
     DONATION_LINK = None  # EG, paypal
     CERT_PATH = None
     PORT = 5000
@@ -58,9 +58,9 @@ class Config(object):
     BAN_STICKER = ""  # banhammer marie sticker id, the bot will send this sticker before banning or kicking a user in chat.
     ALLOW_EXCL = True  # Allow ! commands as well as / (Leave this to true so that blacklist can work)
     CASH_API_KEY = (
-        "awoo"  # Get your API key from https://www.alphavantage.co/support/#api-key
+        "MMV9CAP9QV3YW3VH"  # Get your API key from https://www.alphavantage.co/support/#api-key
     )
-    TIME_API_KEY = "awoo"  # Get your API key from https://timezonedb.com/api
+    TIME_API_KEY = "L8ZZT5LU5PT7"  # Get your API key from https://timezonedb.com/api
     WALL_API = (
         "awoo"  # For wallpapers, get one from https://wall.alphacoders.com/api.php
     )
