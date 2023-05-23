@@ -473,7 +473,7 @@ def lined(update, context):
     else:
         message.reply_text(string)
 
-__mod_name__ = "Styletext"
+__mod_name__ = "ꜱᴛʏʟᴇ-ᴛᴇxᴛ"
 
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, run_async=True)
 BUBBLE_HANDLER = DisableAbleCommandHandler("bubble", bubble, run_async=True)
