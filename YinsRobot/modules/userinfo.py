@@ -568,8 +568,6 @@ When marked as AFK, any mentions will be replied to with a message stating that 
 ❂ /afk <reason>*:* Mark yourself as AFK.
   - brb <reason>: Same as the afk command, but not a command. 
   
-*What is that health thingy?*
- Come and see [HP System explained](https://t.me/KennedyProject/44)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
