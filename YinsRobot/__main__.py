@@ -619,7 +619,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
             ),
         )
 
@@ -691,7 +691,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Go Back",
+                                text="◁",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
