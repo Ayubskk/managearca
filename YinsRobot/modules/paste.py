@@ -12,7 +12,7 @@ from YinsRobot import pbot as app
 from YinsRobot.utils.errors import capture_err
 from YinsRobot.utils.pastebin import paste
 
-__mod_name__ = ᴩᴀꜱᴛᴇ"
+__mod_name__ = "ᴩᴀꜱᴛᴇ"
 
 pattern = re.compile(
     r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$"
