@@ -109,7 +109,7 @@ async def cancel_spam(event):
         return await event.respond("__Dihentikan...__")
 
 
-__mod_name__ = "Tag all"
+__mod_name__ = "ᴛᴀɢ-ᴀʟʟ"
 __help__ = """
 ──「 Mention all func 」──
 
